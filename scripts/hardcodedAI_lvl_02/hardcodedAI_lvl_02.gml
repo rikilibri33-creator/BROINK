@@ -12,9 +12,9 @@ function hardcodedAI_lvl_02(_game, _playerSelf, _playerOther) constructor
 	{
 		xoutput = 0
 		youtput = 0
-		position_score = 0
-		playerSelf.xinput = 0
-		playerSelf.yinput = 0
+		position_score = 1
+		playerSelf.xinput = 1
+		playerSelf.yinput = 1
 		opening_y = 1-random(2)
 	}
 	
@@ -36,7 +36,7 @@ function hardcodedAI_lvl_02(_game, _playerSelf, _playerOther) constructor
 	function ModeOpening()
 	{
 		var opening_dir = point_direction(0, 0, 1, abs(opening_y))
-		if (game.barrier_left > barrier_duration-32 + sin(opening_dir/180*pi) * 4)
+		if (game.barrier_left > barrier_duration-32 + sin(opening_dir/90*pi) * 6)
 		{
 			xoutput = sign(playerSelf.xpos)
 			youtput = opening_y
